@@ -1,0 +1,11 @@
+<template>
+    <require from="./item"></require>
+
+    <div class="listr-list">
+        <h1>${ name }</h1>
+        <item
+            repeat.for="item of items"
+            label.bind="item"
+        ></item>
+    </div>
+</template>
