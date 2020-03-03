@@ -11,4 +11,8 @@ export class List {
     name = '';
 
     items = TestItems;
+
+    handleReserve(item: string) {
+        alert(`Reserved '${item}'`);
+    }
 }

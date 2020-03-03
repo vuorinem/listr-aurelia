@@ -1,5 +1,8 @@
 <template>
+    <require from="./reserve-button"></require>
+
     <div class="listr-item">
         <span class="listr-item-name">${ label }</span>
+        <reserve-button click.delegate="handleReserve()"></reserve-button>
     </div>
 </template>
