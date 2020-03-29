@@ -1,15 +1,16 @@
+import { ItemData } from './list-api';
 import { bindable } from "aurelia";
 
 export class Item {
     @bindable
-    label = '';
+    item: ItemData;
 
     @bindable
-    reserve: ({ item: string }) => void;
+    reserve: ({ item: ItemData }) => void;
 
     handleReserve() {
         if (this.reserve) {
-            this.reserve({ item: this.label });
+            this.reserve({ item: this.item });
         }
     }
 }

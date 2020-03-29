@@ -4,8 +4,9 @@
     <div class="listr-list">
         <h1>${ name }</h1>
         <item
-            repeat.for="item of items"
-            label.bind="item"
+            if.bind="!!list"
+            repeat.for="item of list.items"
+            item.bind="item"
             reserve.call="handleReserve(item)"
         ></item>
     </div>

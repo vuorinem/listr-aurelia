@@ -1,18 +1,17 @@
-import { bindable } from "aurelia";
-
-const TestItems = [
-    'First item',
-    'Second item',
-    'Third item',
-];
+import { ListData, getList, ItemData } from './list-api';
+import { bindable } from 'aurelia';
 
 export class List {
     @bindable
     name = '';
 
-    items = TestItems;
+    list: ListData | null;
 
-    handleReserve(item: string) {
-        alert(`Reserved '${item}'`);
+    async beforeBind() {
+        this.list = await getList(this.name);
+    }
+
+    handleReserve(item: ItemData) {
+        alert(`Reserved '${item.label}'`);
     }
 }
