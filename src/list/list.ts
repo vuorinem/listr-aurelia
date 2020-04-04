@@ -8,6 +8,10 @@ export class List {
     list: ListData | null;
     unsubscribe: Unsubscribe | null = null;
 
+    async nameChanged() {
+        await this.initList();
+    }
+
     async beforeBind() {
         await this.initList();
     }
