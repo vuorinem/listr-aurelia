@@ -1,5 +1,6 @@
 <template>
     <require from="./list/list"></require>
     
-    <list name="My List"></list>
+    <input type="text" value.bind="listName" />
+    <list name.bind="listName"></list>
 </template>
