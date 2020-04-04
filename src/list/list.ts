@@ -14,4 +14,8 @@ export class List {
     handleReserve(item: ItemData) {
         alert(`Reserved '${item.label}'`);
     }
+
+    handleCancel(item: ItemData) {
+        alert(`Cancelled '${item.label}'`);
+    }
 }

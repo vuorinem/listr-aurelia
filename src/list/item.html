@@ -1,8 +1,11 @@
 <template>
     <require from="./reserve-button"></require>
+    <require from="./cancel-button"></require>
 
     <div class="listr-item">
         <span class="listr-item-name">${ item.label }</span>
-        <reserve-button click.delegate="handleReserve()"></reserve-button>
+        <span class="listr-item-count">(${ item.reservedCount }/${ item.count })</span>
+        <reserve-button reserve.trigger="handleReserve()"></reserve-button>
+        <cancel-button cancel.trigger="handleCancel()"></cancel-button>
     </div>
 </template>
